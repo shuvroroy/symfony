@@ -35,7 +35,7 @@ class PathPackage extends Package
     {
         parent::__construct($versionStrategy, $context);
 
-        if (!$basePath) {
+        if ('' === $basePath) {
             $this->basePath = '/';
         } else {
             if ('/' != $basePath[0]) {
